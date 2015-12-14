@@ -22,7 +22,7 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: '../public'
   };
 
   // Define the configuration for all the tasks
@@ -83,25 +83,6 @@ module.exports = function (grunt) {
       livereload: {
         options: {
           open: true,
-
-          // middleware: function (connect, options) {
-          //   var middlewares = [];
-
-          //   if (!Array.isArray(options.base)) {
-          //     options.base = [options.base];
-          //   }
-
-          //   // Setup the proxy
-          //   middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
-
-          //   // Serve static files
-          //   options.base.forEach(function(base) {
-          //     middlewares.push(connect.static(base));
-          //   });
-
-          //   return middlewares;
-          // }
-
           middleware: function (connect) {
             var middlewares = [];
 
@@ -121,21 +102,6 @@ module.exports = function (grunt) {
 
             return middlewares;
           }
-
-          // middleware: function (connect) {
-          //   return [
-          //     connect.static('.tmp'),
-          //     connect().use(
-          //       '/bower_components',
-          //       connect.static('./bower_components')
-          //     ),
-          //     connect().use(
-          //       '/app/styles',
-          //       connect.static('./app/styles')
-          //     ),
-          //     connect.static(appConfig.app)
-          //   ];
-          // }
         }
       },
       test: {

@@ -18,3 +18,7 @@ cafe@ubuntu:~/projects/rails_angular_demo/client$ yo angular
 ```
 npm install --save-dev grunt-connect-proxy
 ```
+## Build client app
+```
+grunt build
+```
