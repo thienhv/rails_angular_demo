@@ -5,7 +5,12 @@
 cafe@ubuntu:~/projects$ rails new rails_angular_demo
 ```
 
-## Creat api users
+## Tạo api users đơn giản
 ```
 cafe@ubuntu:~/projects/rails_angular_demo$ rails g scaffold user name:string
+```
+
+## Tạo app client
+```
+cafe@ubuntu:~/projects/rails_angular_demo/client$ yo angular
 ```
