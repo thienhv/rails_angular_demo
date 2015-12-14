@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('clientApp', [
     'ngAnimate',
     'ngCookies',
@@ -29,7 +29,18 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/users', {
+        templateUrl: 'views/users.html',
+        controller: 'UserCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+
+app.factory('User', ['$resource', function($resource) {
+  return $resource('/api/users/:id.json', null, {
+    'update': { method:'PUT' }
+  });
+}]);
