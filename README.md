@@ -14,3 +14,7 @@ cafe@ubuntu:~/projects/rails_angular_demo$ rails g scaffold user name:string
 ```
 cafe@ubuntu:~/projects/rails_angular_demo/client$ yo angular
 ```
+## Thiết lập proxy dùng grunt-connect-proxy
+```
+npm install --save-dev grunt-connect-proxy
+```
